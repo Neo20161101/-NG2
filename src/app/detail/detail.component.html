@@ -1,0 +1,29 @@
+<div class="container">
+    <ul class="breadcrumb">
+        <li><a routerLink="/start">主页</a></li>
+        <li>详情</li>
+    </ul>
+    <!-- 获取基础面板，只需要在div元素中添加.panel和.panel-default类即可-->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="page-header">
+                <h3>{{dish.name}}</h3>
+                <img src="assets/img/{{dish.img_lg}}" class="img-responsive" alt=""/>
+                <!--text-justify 设定文本对齐，段落中超出屏幕部分文本自动换行-->
+                <!--well是一种会引起内容凹陷显示或者插图效果的容器 -->
+                <div class="text-justify well">
+                    <p class="lead">{{dish.detail}}</p>
+                    <p>{{dish.material}}</p>
+                    <div class="price text-success">{{dish.price}}</div>
+                </div>
+            </div>
+        </div>
+<!--可以在面板中添加脚注，只需要在div元素中添加panel-footer即可 -->
+        <div class="panel-footer">
+            <div class="text-right">
+                <button routerLink="/order" class="btn btn-success">我要下单</button>
+                <button routerLink="/main" class="btn btn-primary">我再看看</button>
+            </div>
+        </div>
+    </div>
+</div>
