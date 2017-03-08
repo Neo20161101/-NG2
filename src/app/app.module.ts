@@ -10,6 +10,9 @@ import { MainComponent } from './main/main.component';
 import { DetailComponent } from './detail/detail.component';
 import { OrderComponent } from './order/order.component';
 import { MyOrderComponent } from './myorder/myorder.component';
+import {HeaderComponent} from './header.component';
+import {FooterComponent} from './footer.component';
+
 import {AppRoutingModule} from './app.router'
 import { ResolveGuard } from './detail/data_guard'
 import {DetailService} from './detail/detail.service'
@@ -18,7 +21,7 @@ import {MyOrderService} from "./myorder/myorder.service"
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule ,HttpModule,FormsModule,CommonModule],
-  declarations: [ AppComponent,StartComponent,MainComponent,DetailComponent,OrderComponent,MyOrderComponent ],
+  declarations: [ HeaderComponent,FooterComponent,AppComponent,StartComponent,MainComponent,DetailComponent,OrderComponent,MyOrderComponent ],
   bootstrap:    [ AppComponent ],
   providers:[ResolveGuard,DetailService,SubmitService,MyOrderService]
 })
