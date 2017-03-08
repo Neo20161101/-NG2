@@ -1,0 +1,21 @@
+<div class="container">
+    <h3 class="text-center">我的订单</h3>
+    <table class="table">
+        <tr>
+            <th>编号</th>
+            <th>菜品</th>
+            <th>下单时间</th>
+            <th>联系人</th>
+        </tr>
+        <tr *ngFor="let order of orderList">
+            <td>{{order.oid}}</td>
+            <td>
+                <a routerLink="/main">
+                    <img src="assets/img/{{order.img_sm}}" alt="">
+                </a>
+            </td>
+            <td>{{order.order_time|date:'yy-MM-dd hh:mm'}}</td>
+            <td>{{order.user_name}}</td>
+        </tr>
+    </table>
+</div>

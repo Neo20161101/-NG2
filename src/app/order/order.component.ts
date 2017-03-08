@@ -34,6 +34,7 @@ export class OrderComponent {
             
             if(data[0].msg == 'succ')
             {
+                localStorage.setItem("phone",this.order.phone);
                 this.result = "下单成功，订单编号为"+data[0].did;
             }
             else

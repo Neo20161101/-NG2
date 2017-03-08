@@ -14,11 +14,12 @@ import {AppRoutingModule} from './app.router'
 import { ResolveGuard } from './detail/data_guard'
 import {DetailService} from './detail/detail.service'
 import {SubmitService} from "./order/order.service"
+import {MyOrderService} from "./myorder/myorder.service"
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule ,HttpModule,FormsModule,CommonModule],
   declarations: [ AppComponent,StartComponent,MainComponent,DetailComponent,OrderComponent,MyOrderComponent ],
   bootstrap:    [ AppComponent ],
-  providers:[ResolveGuard,DetailService,SubmitService]
+  providers:[ResolveGuard,DetailService,SubmitService,MyOrderService]
 })
 export class AppModule { }
